@@ -1,0 +1,7 @@
+<?php 
+include 'dbcon.php';
+$id=$_GET['id'];
+$caseid=$_GET['cid'];
+$query=mysql_query("update filedues set status='received' where dueid=$id");
+header("location: casefiledetails.php?id=$caseid");
+ ?>
